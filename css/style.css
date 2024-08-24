@@ -1,0 +1,584 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul {
+    list-style: none;
+}
+:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+@font-face {
+    font-family: rubic-r;
+    src: url(../fonts/Rubik-Regular.ttf);
+}
+@font-face {
+    font-family: rubic-m;
+    src: url(../fonts/Rubik-Medium.ttf);
+}
+@font-face {
+    font-family: rubic-b;
+    src: url(../fonts/Rubik-Bold.ttf);
+}
+body {
+    font-family: rubic-r;
+    font-size: 16px;
+    color: #FFFFFF;
+    overflow-x: hidden;
+}
+h1 {
+    font-size: 2.5rem;
+    font-family: rubic-b;
+}
+.header {
+    background-color: #0D0D2B;
+    background-size: auto 100%;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.top {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 3.75rem;
+}
+.logo {
+    margin-right: 28.188rem;
+}
+.menu_list{
+    display: flex;
+    gap: 2rem;
+    margin-right: 3.5rem;
+}
+.signin{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.delimiter {
+    width: 2px;
+    height: 1.5rem;
+    background: #FFFFFF;
+}
+.reg_button{
+    width: 8.125rem;
+    height: 3.25rem;
+    background: #3671E9;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.reg_button:hover {
+    background: #578dfa;
+}
+.section_one {
+    background-color: #0D0D2B;
+    padding-top: 3.188rem;
+}
+.value_prop_inner {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: 468px 565px;
+}
+.value__prop {
+    position: relative;
+    display: flex;
+}
+.info {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    height: 2.5rem;
+    width: 22.813rem;
+}
+.save_figure {
+    background: #FFFFFF;
+    width: 8.313rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    font-family: rubic-m;
+    line-height: 150%;
+    color: #0D0D2B;
+    margin: .25rem 0 .25rem .25rem;
+}
+.button_text {
+    white-space: nowrap;
+    margin-right: 0.688rem;
+}
+.value__prop-btext {
+    white-space: nowrap;
+    font-size: 4rem;
+    margin-top: 1.5rem;
+    max-width: 36.15rem;
+}
+.value__prop-stext {
+    white-space: nowrap;
+    line-height: 1.75rem;
+    max-width: 27.188;
+    margin-top: 1.5rem;
+}
+.try_button {
+    margin-top: 2rem;
+    background: #3671E9;
+    width: 12.625rem;
+    height: 4rem;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    border: none;
+    cursor: pointer;
+}
+.try_button:hover {
+    background: #578dfa;
+}
+.try_button p {
+    font-family: rubic-m;
+    font-size: 1.125rem;
+    color: #FFFFFF;
+    margin: 1.156rem 0 1.156rem 1.5rem;
+    white-space: nowrap;
+}
+.try_button img {
+    margin: 1rem 1rem 1rem 0;
+    width: 2rem;
+    height: 2rem;
+}
+.whocrappo {
+    margin-top: 14.938rem;
+}
+.numbers_list {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.number_items {
+    display: flex;
+    gap: 1.5rem;
+}
+.number_items-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+.experience {
+    margin-top: 12rem;
+}
+.illust_2 {
+    position: absolute;
+}
+.experience_text {
+    margin-left: 45rem;
+    white-space: nowrap;
+}
+.experience_rtext {
+    margin-top: 1.5rem;
+}
+.experience_button {
+    background: #3671E9;
+    height: 3.688rem;
+    width: 9.063rem;
+    border-radius: 2rem;
+    border: none;
+    font-family: rubic-m;
+    font-size: 1.125rem;
+    color: #FFFFFF;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+.experience_button:hover {
+    background: #578dfa;
+}
+
+.trade {
+    margin-top: 16.375rem;
+    text-align: center;
+}
+.check_btext {
+    margin-bottom: 1.5rem;
+}
+
+.calculate {
+    margin: 4.438rem 8.5rem 0 7.625rem;
+}
+
+.calculate_content {
+    width: 58.875rem;
+    height: 9.688rem;
+    background: white;
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    justify-content: space-around;
+    border-radius: 2rem 2rem 0 0;
+}
+.saerch {
+    border: none;
+    border-bottom: 1px solid #E0E0E0;
+    width: 25.188rem;
+    height: 1.875rem;
+    font-family: inherit;
+    font-size: 1.125rem;
+    line-height: 150%;
+    color: #0D0D2B;
+}
+.select {
+    color: #0D0D2B;
+    font-family: inherit;
+    font-size: 1.125rem;
+    line-height: 150%;
+    border: none;
+    border-bottom: 1px solid #E0E0E0;
+}
+.calculate_button {
+    width: 9.125rem;
+    height: 3.688rem;
+    border-radius: 32px;
+    border: none;
+    background: #3671E9;
+    font-family: rubic-m;
+    font-size: 1.125rem;
+    line-height: 150%;
+    color: white;
+    cursor: pointer;
+}
+.calculate_button:hover {
+    background: #578dfa;
+}
+
+
+.section_two {
+    background-color: #FAFBFF;
+    color: #0D0D2B;
+}
+.estimated_figure {
+    width: 58.875rem;
+    height: 13.5rem;
+    background: #FFFFFF;
+    border-radius: 0 0 2rem 2rem;
+    margin: 0 8.5rem 5.813rem 7.625rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.estimated_revenue {
+    padding: 3rem 3.625rem;
+}
+.estimated-text {
+    color: #3671E9;
+    font-family: rubic-m;
+    font-size: 1.125rem;
+}
+.estimated-value {
+    color: #0D0D2B;
+    font-family: rubic-b;
+    font-size: 2rem;
+    line-height: 150%;
+    margin-top: 1rem;
+}
+.estimated-value span {
+    color: #3671E9;
+}
+.estimated-low_text {
+    color: #828282;
+}
+
+.cryptocurrencies {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cryptocurrencies_title h1 {
+    text-align: center;
+    line-height: 150%;
+}
+.cryptocurrencies_items {
+    display: flex;
+    gap: 45px;
+    margin-bottom: 100px;
+}
+.cryptocurrencies_item {
+    padding: 48px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 370px;
+    height: 433px;
+    background: white;
+    color: #0D0D2B;
+    border-radius: 32px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.cryptocurrencies_item_text {
+    text-align: center;
+}
+.cryptocurrencies_img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 46px;
+}
+.cryptocurrencies_item_title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+.cryptocurrencies_item_title h1{
+    font-size: 32px;
+    line-height: 150%;
+}
+.cryptocurrencies_item_title p {
+    font-family: rubic-m;
+    font-size: 18px;
+    line-height: 150%;
+    color: #BDBDBD;
+}
+.cryptocurrencies_item_low-text {
+    line-height: 28px;
+    text-align: center;
+    color: #828282;
+    margin-bottom: 25px;
+}
+.cryptocurrencies_button {
+    width: 64px;
+    height: 64px;
+    border-radius: 32px;
+    background: white;
+    white-space: nowrap;
+    border: 1px solid #2B076E;
+    transition: width .3s ease, height .3s ease;
+}
+.cryptocurrencies_button_text {
+    position: absolute;
+    font-family: rubic-m;
+    font-size: 18px;
+    opacity: 0;
+    transition: opacity .3s ease;
+    color: white;
+}
+
+.cryptocurrencies_item:hover {
+    background: #2B076E;
+    color: white;
+}
+.cryptocurrencies_item:hover .cryptocurrencies_button {
+    margin: 0 81px 0 84px;
+    background: #3671E9;
+    width: 207px;
+    height: 64px;
+    border-radius: 32px;
+    color: white;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    border: none;
+}
+.cryptocurrencies_item:hover button img {
+    padding: 16px;
+}
+.cryptocurrencies_item:hover .cryptocurrencies_button_text {
+    position: relative;
+    opacity: 1;
+}
+.cryptocurrencies_item:hover .cryptocurrencies_button:hover {
+    background: #578dfa;
+    cursor: pointer;
+}
+
+.section_three {
+    background-color: #2B076E;
+    padding-bottom: 88px;
+}
+.features_h1 {
+    text-align: center;
+    padding-top: 100px;
+}
+.features {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+}
+.invest_smart {
+    display: flex;
+    gap: 100px;
+}
+.invest_smart_text {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.features-text_h1 {
+    font-size: 32px;
+}
+.features-text-p {
+    color: #E0E0E0;
+}
+.features-button {
+    margin-top: 6px;
+    width: 162px;
+    height: 59px;
+    background: #3671E9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 32px;
+}
+.features-button:hover {
+    background: #578dfa;
+    cursor: pointer;
+}
+.features-button_text {
+    font-family: rubic-m;
+    font-size: 18px;
+}
+.detailed {
+    display: flex;
+    gap: 100px;
+}
+.detailed-img {
+    margin-left: calc(50vw - 770px);
+}
+.detailed_text {
+    margin-top: 105px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.profit {
+    display: flex;
+    justify-content: space-between;
+}
+.profit_text {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.start_mining {
+    margin-top: 188px;
+    padding: 48px;
+    width: 1200px;
+    height: 216px;
+    background: #3671E9;
+    border-radius: 8px;
+    display: flex;
+}
+.start_mining-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 501px;
+}
+.enter_email {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+.email_input {
+    width: 375px;
+    height: 35px;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    background: #3671E9;
+    color: white;
+}
+.email_input::placeholder {
+    color: white;
+}
+.enter_email-button {
+    width: 152px;
+    height: 55px;
+    background: white;
+    border-radius: 32px;
+    color: #0D0D2B;
+    font-family: rubic-m;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.enter_email-button:hover {
+    background: #dadada;
+}
+footer {
+    padding: 80px 0 80px;
+    background: #0D0D2B;
+}
+.footer_item {
+    display: flex;
+}
+.footer_content {
+    display: flex;
+    margin-left: 12vw;
+    gap: 2vw;
+}
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    width: 14vw;
+    height: 29vh;
+    gap: 1vw;
+}
+.footer-list_text-h1 {
+    font-family: rubic-m;
+    font-size: 1.25rem;
+    margin-bottom: .5vh;
+}
+.footer-list_item {
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+}
+.payment_systems {
+    margin-left: 7vw;
+}
+.payment_systems-text {
+    font-family: rubic-m;
+    font-size: 2rem;
+}
+.payment_system_imgs {
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    gap: 2vw;
+}
+.payment_systems_img {
+    width: 7vw;
+    height: 8vh;
+}
+.footer_rights {
+    margin-top: 120px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 4.5vh;
+}
+.footer_rights-imgs {
+    margin-top: 122px;
+    gap: 32px;
+}

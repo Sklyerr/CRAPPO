@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кнопка с анимацией</title>
+    <style>
+        .circle-button {
+            width: 100px; /* Начальная ширина */
+            height: 100px; /* Начальная высота */
+            background-color: #4CAF50; /* Цвет фона */
+            border-radius: 50%; /* Круглая форма */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            position: relative;
+            transition: width 0.3s ease, height 0.3s ease, border-radius 0.3s ease; /* Плавная анимация */
+        }
+
+        .circle-button:hover {
+            width: 150px; /* Новая ширина при наведении */
+            height: 60px; /* Новая высота при наведении */
+            border-radius: 15px; /* Закругленные углы при наведении */
+        }
+
+        .arrow {
+            width: 0;
+            height: 0;
+            border-left: 10px solid white; /* Цвет стрелки */
+            border-top: 6px solid transparent;
+            border-bottom: 6px solid transparent;
+            position: absolute;
+            right: 15px; /* Положение стрелки справа */
+            transform: rotate(45deg); /* Поворот стрелки */
+        }
+
+        .button-text {
+            opacity: 0; /* Скрытый текст */
+            color: white; /* Цвет текста */
+            transition: opacity 0.3s ease; /* Плавная анимация для текста */
+        }
+
+        .circle-button:hover .button-text {
+            opacity: 1; /* Показать текст при наведении */
+        }
+    </style>
+</head>
+<body>
+
+    <button class="circle-button">
+        <div class="button-text">Нажми</div> <!-- Текст кнопки -->
+        <div class="arrow"></div>
+    </button>
+
+</body>
+</html>
