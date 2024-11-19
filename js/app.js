@@ -2,7 +2,7 @@
 function handleClick(event) {
   event.preventDefault(); // Предотвращаем переход по ссылке
   const linkId = event.target.id; // Получаем id элемента
-  console.log('ID ссылки:', linkId);
+  if (linkId == "main"){}
 }
 
 // Добавляем обработчик клика на все ссылки
