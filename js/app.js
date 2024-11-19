@@ -2,7 +2,18 @@
 function handleClick(event) {
   event.preventDefault(); // Предотвращаем переход по ссылке
   const linkId = event.target.id; // Получаем id элемента
-  if (linkId == "main"){}
+  if (linkId == "menuProducts"){
+.   let block = document.getElementById('blockProducts');
+.   let blockPosition = block.getBoundingClientRect().top;
+.   let offsetPosition = blockPosition + window.scrollY
+
+.   window.scroll({
+.     top: offsetPosition,
+.     behavior: "smooth"
+})
+}
+
+
 }
 
 // Добавляем обработчик клика на все ссылки
