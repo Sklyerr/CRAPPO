@@ -1,14 +1,12 @@
-// Функция-обработчик клика по ссылке
+// Функция-обработчик клика
 function handleClick(event) {
-  event.preventDefault(); // Предотвращаем стандартное поведение ссылки (переход по URL)
-  const linkId = event.target.id; // Получаем значение атрибута id элемента, на который кликнули
-  console.log('ID ссылки:', linkId); // Выводим id элемента в консоль
+  event.preventDefault(); // Предотвращаем переход по ссылке
+  const linkId = event.target.id; // Получаем id элемента
+  console.log('ID ссылки:', linkId);
 }
 
-// Выбираем все элементы <a> на странице
-const links = document.querySelectorAll('a'); // querySelectorAll возвращает NodeList со всеми тегами <a>
-
-// Для каждого элемента из списка ссылок добавляем обработчик события
+// Добавляем обработчик клика на все ссылки
+const links = document.querySelectorAll('a'); // Выбираем все теги <a>
 links.forEach(link => {
-  link.addEventListener('click', handleClick); // При клике на ссылку будет вызвана функция handleClick
+  link.addEventListener('click', handleClick);
 });
