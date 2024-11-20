@@ -51,6 +51,9 @@ h3 {
     color: #FFFFFF;
     line-height: calc(1.5rem + 0.5vw);
 }
+.content > * {
+	will-change: transform;
+}
 
 
 
@@ -62,6 +65,8 @@ h3 {
 .header {
     background: #0D0D2B;
     padding-top: 4.2vw;
+    padding-bottom: 2px;
+    margin-bottom: -2px;
 }
 .top {
     display: flex;
@@ -485,7 +490,7 @@ h3 {
 .products__list:hover .products__name_cut {
     color: #FFFFFF;
 } 
-.products__button:hover {
+.products__list:hover .products__button {
     display: block;
     width: 14.23vw;
     height: 4.44vw;
@@ -501,11 +506,11 @@ h3 {
     cursor: pointer;
     transition: .3s;
 }
-.products__button:hover p {
+.products__list:hover .products__button p {
     display: block;
     transform: translateX(0);
 }
-.products__button:hover .products__arrow {
+.products__list:hover .products__button .products__arrow {
     width: 2.22vw;
     height: 2.22vw;
     border: none;
@@ -644,6 +649,8 @@ h3 {
 
 .footer {
     background: #0D0D2B;
+    padding-top: 2px;
+    margin-top: -2px;
 }
 .footer__content {
     display: flex;

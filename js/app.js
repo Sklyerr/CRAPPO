@@ -1,27 +1,52 @@
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+if (ScrollTrigger.isTouch !== 1) {
+
+    ScrollSmoother.create ({
+        wrapper: '.wrapper',
+        content: '.content',
+        smooth: 2,
+        effects: true
+    })
+
+}
+
+
+
 function blockGetId(blockId) {
     let block = document.getElementById(blockId);
-    let blockPosition = block.getBoundingClientRect().top;
-    let offsetPosition = blockPosition + window.scrollY;
-    return offsetPosition; // Возвращаем значение offsetPosition
+    let blockPosition = block.getBoundingClientRect().top + window.scrollY;
+    return blockPosition;
 }
 
 // Функция-обработчик клика
 function handleClick(event) {
     event.preventDefault(); // Предотвращаем переход по ссылке
-    const linkId = event.target.id; // Получаем id элемента
-    if (linkId === "menuProducts") { // Сравнение строгое
-        let blockId = 'blockProducts';
-        let offsetPosition = blockGetId(blockId); // Получаем значение offsetPosition из функции
-
-        window.scroll({
-            top: offsetPosition,
-            behavior: "smooth"
-        });
+    let linkId = event.target.id; // Получаем id элемента
+    let blockId;
+    if (linkId == "menuProducts"){
+        blockId = 'blockProducts';
+    } if (linkId == "menuFeatures"){
+        blockId = 'blockFeatures';
+    } if (linkId == "menuAbout"){
+        blockId = 'blockAbout'
+    } if (linkId == "menuContact"){
+        blockId = 'blockContact'
     }
-}
 
+    let blockPosition = blockGetId(blockId);
+
+    window.scroll({
+        top: blockPosition,
+        behavior: "smooth"
+    })
+};
+
+  
 // Добавляем обработчик клика на все ссылки
-const links = document.querySelectorAll('a'); // Выбираем все теги <a>
+let links = document.querySelectorAll('a');
 links.forEach(link => {
     link.addEventListener('click', handleClick);
-});
+})
+
+// listenerClick();
+// scrollToBlock(block);
