@@ -23,15 +23,17 @@ function handleClick(event) {
     event.preventDefault(); // Предотвращаем переход по ссылке
     let linkId = event.target.id; // Получаем id элемента
     let blockId;
-    if (linkId == "menuProducts"){
+    if (linkId == "menuProducts" || linkId == "footerProducts"){
         blockId = 'blockProducts';
-    } if (linkId == "menuFeatures"){
+    } if (linkId == "menuFeatures" || linkId == "footerFeatures"){
         blockId = 'blockFeatures';
-    } if (linkId == "menuAbout"){
-        blockId = 'blockAbout'
-    } if (linkId == "menuContact"){
-        blockId = 'blockContact'
-    }
+    } if (linkId == "menuAbout" || linkId == "footerAbout"){
+        blockId = 'blockAbout';
+    } if (linkId == "menuContact" || linkId == "footerContact"){
+        blockId = 'blockContact';
+    } if (linkId == "footerHome"){
+        blockId = 'blockTop';
+    } 
 
     let blockPosition = blockGetId(blockId);
 
@@ -47,6 +49,3 @@ let links = document.querySelectorAll('a');
 links.forEach(link => {
     link.addEventListener('click', handleClick);
 })
-
-// listenerClick();
-// scrollToBlock(block);
